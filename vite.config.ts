@@ -6,7 +6,7 @@ export default defineConfig({
   plugins: [react()],
   server: {
     proxy: {
-      // Avoid browser CORS issues in local dev; production uses direct Jolpica URL.
+      // Same paths are rewritten on Vercel / Netlify so the browser never hits cross-origin APIs.
       '/api/jolpica': {
         target: 'https://api.jolpi.ca',
         changeOrigin: true,

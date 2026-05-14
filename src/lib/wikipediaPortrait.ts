@@ -1,5 +1,5 @@
 function wikiBase(): string {
-  return import.meta.env.DEV ? '/api/wiki' : 'https://en.wikipedia.org'
+  return '/api/wiki'
 }
 
 /**

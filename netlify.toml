@@ -1,0 +1,15 @@
+[[redirects]]
+  from = "/api/jolpica/*"
+  to = "https://api.jolpi.ca/:splat"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/api/wiki/*"
+  to = "https://en.wikipedia.org/:splat"
+  status = 200
+  force = true
+
+[build]
+  command = "npm run build"
+  publish = "dist"

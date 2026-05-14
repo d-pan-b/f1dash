@@ -60,8 +60,9 @@ interface MrData {
   SeasonTable?: { Seasons?: { season: string }[] }
 }
 
+/** Same-origin in dev (Vite proxy) and on hosts with `/api/jolpica` rewrite (see vercel.json). */
 function apiBase(): string {
-  return import.meta.env.DEV ? '/api/jolpica' : 'https://api.jolpi.ca'
+  return '/api/jolpica'
 }
 
 export function resultsUrl(year: number, offset = 0, limit = 100): string {

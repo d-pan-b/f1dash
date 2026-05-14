@@ -913,7 +913,7 @@ code {
     0 0 0 1px rgba(0, 0, 0, 0.35),
     0 0 100px rgba(225, 6, 0, 0.06);
   padding: clamp(1rem, 2vw, 1.35rem);
-  min-height: 460px;
+  min-height: 680px;
   overflow: hidden;
   transform: translateZ(0);
 }
@@ -953,7 +953,7 @@ code {
 .chart-host {
   position: relative;
   z-index: 1;
-  min-height: 520px;
+  min-height: 780px;
   padding: 0.25rem 0.15rem 0;
 }
 
@@ -980,6 +980,55 @@ code {
   margin: 0;
   font-size: 0.82rem;
   color: var(--muted);
+}
+
+.recharts-wrap__toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem 1rem;
+  margin-bottom: 0.35rem;
+}
+
+.recharts-wrap__hint {
+  margin: 0;
+  flex: 1;
+  min-width: min(100%, 12rem);
+  font-size: 0.78rem;
+  line-height: 1.45;
+  color: var(--muted);
+}
+
+.recharts-wrap__reset {
+  flex-shrink: 0;
+  appearance: none;
+  border: 1px solid rgba(225, 6, 0, 0.45);
+  border-radius: 999px;
+  padding: 0.4rem 0.95rem;
+  font-family: var(--font);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  cursor: pointer;
+  color: #fff;
+  background: rgba(225, 6, 0, 0.18);
+  transition: background 0.2s ease, border-color 0.2s ease, transform 0.15s ease;
+}
+
+.recharts-wrap__reset:hover {
+  background: rgba(225, 6, 0, 0.32);
+  border-color: rgba(225, 6, 0, 0.75);
+}
+
+.recharts-wrap__reset:active {
+  transform: scale(0.98);
+}
+
+.recharts-wrap__reset:focus-visible {
+  outline: 2px solid var(--f1);
+  outline-offset: 2px;
 }
 
 .recharts-wrap__canvas {
